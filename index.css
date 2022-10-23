@@ -1,0 +1,15 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px; /* 5px rounded corners */
+  width: 80vh;
+  font-size: 20px;
+  text-align: center;
+  border-color: black;
+  margin: auto;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: yellow;
+}

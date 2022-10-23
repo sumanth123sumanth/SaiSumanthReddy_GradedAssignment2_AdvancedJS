@@ -1,0 +1,83 @@
+#searchWrapper {
+  width: 20%;
+  margin: 0 auto;
+}
+
+#resume {
+  margin-top: 20px;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04aa6d;
+  color: white;
+}
+
+#header {
+  background-color: aqua;
+  height: 10vh;
+  width: 98%;
+  margin: 0 auto;
+}
+
+#name {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#role {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.list {
+  list-style: none;
+}
+
+.float-container {
+  border: 3px solid #fff;
+  padding: 20px;
+}
+
+.left-side {
+  width: 15%;
+  float: left;
+  padding: 20px;
+}
+
+.right-side {
+  float: right;
+  padding: 20px;
+  width: 80%;
+}
+
+.title-left {
+  text-align: left;
+}
+
+.content-left-margin {
+  margin-left: 50px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px; /* 5px rounded corners */
+  width: 80vh;
+  height: 20vh;
+  font-size: 50px;
+  text-align: center;
+  border-color: black;
+  line-height: 20vh;
+  margin: auto;
+}
