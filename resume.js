@@ -5,7 +5,6 @@ const nextBtn = document.getElementById("next");
 let resumesList = [];
 let filteredResumesList = [];
 let pageNum = 0;
-//var json = require('./Data.json');
 
 searchBar.addEventListener("keyup", (e) => {
   const searchString = e.target.value.toLowerCase();
@@ -25,12 +24,10 @@ searchBar.addEventListener("keyup", (e) => {
   }
 });
 
-const loadCharacters = async () => {
+const loadResumeData = async () => {
   try {
-    // const res = await fetch('https://hp-api.herokuapp.com/api/characters');
-    //const res =  require('./Data.json');
     var request = new XMLHttpRequest();
-    request.open("GET", "./Data.json", false);
+    request.open("GET", "./data/Data.json", false);
     request.send(null);
     resumes = JSON.parse(request.responseText);
     resumesList = resumes["resume"];
@@ -43,20 +40,6 @@ const loadCharacters = async () => {
 
 const displayResume = (resumes, pageNum) => {
   const resumeToDisplay = resumes[pageNum];
-  //console.log(resumes[pageNum]);
-  // const htmlString =
-  //          `
-  //         <li class="character">
-  //             <div>
-  //                 <p>John Doe</p>
-  //                 <p>Applied For: Software Engineer</p>
-  //             </div>
-  //             <h2>${character.name}</h2>
-  //             <p>House: ${character.house}</p>
-  //             <img src="${character.image}"></img>
-  //         </li>
-  //     `;
-
   const techinalSkills = resumeToDisplay.skills.keywords;
   const techinalSkillsHtml = techinalSkills
     .map(function (element) {
@@ -160,11 +143,10 @@ function previous() {
     pageNum--;
     console.log("prev-" + pageNum);
     displayResume(filteredResumesList, pageNum);
-    nextBtn.style.visibility="visible";
+    nextBtn.style.visibility = "visible";
   }
-  if(pageNum==0)
-  {
-    previousBtn.style.visibility="hidden";
+  if (pageNum == 0) {
+    previousBtn.style.visibility = "hidden";
   }
 }
 
@@ -173,12 +155,11 @@ function next() {
     pageNum++;
     console.log("next-" + pageNum);
     displayResume(filteredResumesList, pageNum);
-    previousBtn.style.visibility="visible";
+    previousBtn.style.visibility = "visible";
   }
-  if(pageNum==filteredResumesList.length-1)
-  {
-    nextBtn.style.visibility="hidden";
+  if (pageNum == filteredResumesList.length - 1) {
+    nextBtn.style.visibility = "hidden";
   }
 }
 
-loadCharacters();
+loadResumeData();
